@@ -1,0 +1,38 @@
+{
+  "name": "upyun.io",
+  "version": "0.1.0",
+  "description": "upyun client",
+  "main": "lib/",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha -R spec -t 5000 test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onebook/upyun.io.git"
+  },
+  "keywords": [
+    "client",
+    "upyun",
+    "sdk"
+  ],
+  "files": [
+    "lib/"
+  ],
+  "author": "haoxin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/onebook/upyun.io/issues"
+  },
+  "homepage": "https://github.com/onebook/upyun.io",
+  "devDependencies": {
+    "mocha": "2"
+  },
+  "dependencies": {
+    "mime-types": "2",
+    "mz": "1",
+    "tiny-request": "2"
+  }
+}
