@@ -1,5 +1,4 @@
 test/config.js
 node_modules/
-lib/index.js
 .DS_Store
 *.png
