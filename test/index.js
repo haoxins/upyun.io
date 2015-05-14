@@ -2,7 +2,7 @@
 
 let config = require('./config')
 let assert = require('assert')
-let equal = assert.deepEqual
+let equal = assert.strictEqual
 let path = require('path')
 let upyun = require('..')
 let yun = upyun(config)
@@ -20,19 +20,10 @@ describe('## upyun', function() {
       })
     })
 
-    it('listBucket()', function() {
-      return yun.listBucket('/')
-      .then(function(result) {
-        equal(result.status, 200)
-        // console.log(result.body)
-      })
-    })
-
     it('putFile()', function() {
       return yun.putFile(path.join(__dirname, testfile), filepath)
       .then(function(result) {
         equal(result.status, 200)
-        // console.log(result)
       })
     })
 
@@ -40,7 +31,24 @@ describe('## upyun', function() {
       return yun.headFile(filepath)
       .then(function(result) {
         equal(result.status, 200)
-        // console.log(result)
+      })
+    })
+
+    it('getFile()', function() {
+      return yun.getFile(filepath, path.join(__dirname, Date.now() + '.png'))
+      .then(function(result) {
+        equal(result.status, 200)
+      })
+    })
+
+    it('listBucket()', function() {
+      return yun.listBucket('/')
+      .then(function(result) {
+        equal(result.status, 200)
+        assert(result.body.length > 0)
+        result.body.forEach(function(item) {
+          assert.deepEqual(Object.keys(item), ['bucket', 'type', 'size', 'modifyTime'])
+        })
       })
     })
 
@@ -48,7 +56,6 @@ describe('## upyun', function() {
       return yun.headFile(filepath)
       .then(function(result) {
         equal(result.status, 200)
-        // console.log(result)
       })
     })
   })
