@@ -1,6 +1,6 @@
 {
   "name": "upyun.io",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "upyun client",
   "main": "lib/",
   "directories": {
@@ -31,8 +31,9 @@
     "mocha": "2"
   },
   "dependencies": {
+    "hash-stream": "1",
     "mime-types": "2",
-    "mz": "1",
+    "mz": "2",
     "tiny-request": "2"
   }
 }
