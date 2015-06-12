@@ -26,10 +26,11 @@ iojs client for [upyun](https://www.upyun.com)
   - `opts`: `{Object}` TODO
 
 * `putFile(source, path, opts)`
-  - `source`: `{String}` file path to upload (TODO: support `{Buffer|Stream}`)
+  - `source`: `{String|Buffer|Stream}` file path, buffer data, file stream to upload
   - `path`: `{String}` upyun path
   - `opts`: `{Object}`
     * `type`: `Content-Type`, will parsed by [jshttp/mime-types](https://github.com/jshttp/mime-types)
+    * `size`: file size, **note: if you put file by stream, size is required**
     * `headers`: `{Object}`, custom http headers
 
 * `headFile(path)`
