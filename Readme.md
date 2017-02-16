@@ -1,21 +1,22 @@
+
 [![NPM version][npm-img]][npm-url]
 [![License][license-img]][license-url]
 [![Dependency status][david-img]][david-url]
+[![Node Version][node-version-img]][node-version-url]
 
 ### upyun.io
 
-iojs client for [upyun](https://www.upyun.com)
+another nodejs client for [upyun](https://www.upyun.com)
 
 ### Why not use [official upyun sdk](https://github.com/upyun/node-upyun)
 
-* Promise based
-* Use ES6+, need iojs@2+
-* More friendly api
+* Promise based, async/await friendly
+* More friendly APIs
 * More stable (error handling, no *Sync methods, ...)
 
-### Some cli tools
+### Some CLI tools
 
-* [upyun-upload](https://github.com/onebook/upyun-upload)
+* [upyun-upload](https://github.com/haoxins/upyun-upload)
 
 ### APIs
 
@@ -71,8 +72,8 @@ iojs client for [upyun](https://www.upyun.com)
 * [See tests](test)
 
 ```js
-let upyun = require('upyun.io')
-let client = upyun({
+const upyun = require('upyun.io')
+const client = upyun({
   bucket: '',
   operator: '',
   password: '',
@@ -90,5 +91,7 @@ MIT
 [npm-url]: https://npmjs.org/package/upyun.io
 [license-img]: https://img.shields.io/badge/license-MIT-green.svg?style=flat-square
 [license-url]: http://opensource.org/licenses/MIT
-[david-img]: https://img.shields.io/david/onebook/upyun.io.svg?style=flat-square
-[david-url]: https://david-dm.org/onebook/upyun.io
+[david-img]: https://img.shields.io/david/haoxins/upyun.io.svg?style=flat-square
+[david-url]: https://david-dm.org/haoxins/upyun.io
+[node-version-img]: https://img.shields.io/node/v/upyun.io.svg
+[node-version-url]: https://nodejs.org

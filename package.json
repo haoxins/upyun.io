@@ -1,18 +1,12 @@
 {
   "name": "upyun.io",
   "version": "0.4.0",
-  "description": "upyun client",
+  "description": "another upyun client",
   "main": "lib/",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
     "test": "mocha -R spec -t 5000 test/*.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/onebook/upyun.io.git"
-  },
+  "repository": "haoxins/upyun.io",
   "keywords": [
     "client",
     "upyun",
@@ -23,17 +17,16 @@
   ],
   "author": "haoxin",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/onebook/upyun.io/issues"
-  },
-  "homepage": "https://github.com/onebook/upyun.io",
   "devDependencies": {
-    "mocha": "2"
+    "mocha": "3"
   },
   "dependencies": {
     "hash-stream": "1",
     "mime-types": "2",
     "mz": "2",
     "tiny-request": "2"
+  },
+  "engines": {
+    "node": ">= 8"
   }
 }
